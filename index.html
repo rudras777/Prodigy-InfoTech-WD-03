@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Modern Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Tic Tac Toe</h1>
+            <div class="game-info">
+                <div class="score-board">
+                    <div class="score-item">
+                        <span class="player-label">Player X</span>
+                        <span class="score" id="scoreX">0</span>
+                    </div>
+                    <div class="score-divider"></div>
+                    <div class="score-item">
+                        <span class="player-label">Player O</span>
+                        <span class="score" id="scoreO">0</span>
+                    </div>
+                </div>
+                <div class="current-player">
+                    <span id="currentPlayer">Player X's Turn</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-container">
+            <div class="game-board" id="gameBoard">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button class="btn btn-primary" id="resetBtn">New Game</button>
+                <button class="btn btn-secondary" id="clearScoreBtn">Clear Score</button>
+            </div>
+        </main>
+
+        <div class="game-status" id="gameStatus"></div>
+
+        
+        <div class="modal" id="winnerModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Game Over!</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="winner-animation">
+                        <div class="trophy">🏆</div>
+                    </div>
+                    <p id="modalMessage">Player X Wins!</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+                    <button class="btn btn-secondary" id="closeModalBtn">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bg-animation">
+            <div class="floating-x">✕</div>
+            <div class="floating-o">○</div>
+            <div class="floating-x">✕</div>
+            <div class="floating-o">○</div>
+            <div class="floating-x">✕</div>
+            <div class="floating-o">○</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
